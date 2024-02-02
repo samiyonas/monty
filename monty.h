@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define UNUSED(x) (void)(x)
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -46,5 +47,6 @@ void validity_check(stack_t **head, char *op, unsigned int Line);
 void push(stack_t **head, unsigned int line_number);
 void add_node(stack_t **head, int n);
 int check_for_digit(char *num);
+void pall(stack_t **head, unsigned int line_number);
 
 #endif

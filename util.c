@@ -11,7 +11,7 @@
 void validity_check(stack_t **head, char *op, unsigned int Line)
 {
 	int i;
-	instruction_t a[] = {{"push", push}, {NULL, NULL}};
+	instruction_t a[] = {{"push", push}, {"pall", pall}, {NULL, NULL}};
 
 	for (i = 0; a[i].opcode != NULL; i++)
 	{

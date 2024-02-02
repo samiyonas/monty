@@ -23,3 +23,27 @@ void push(stack_t **stack, unsigned int line_number)
 	data = atoi(str_data);
 	add_node(stack, data);
 }
+/**
+ * pall - print all the values of the stack
+ * @stack: linked list
+ * @line_number: number of line
+ *
+ * Return: void
+ */
+void pall(stack_t **stack, unsigned int line_number)
+{
+	stack_t *ptr = *stack;
+
+	UNUSED(line_number);
+
+	if (*stack == NULL)
+	{
+		return;
+	}
+
+	while (ptr != NULL)
+	{
+		printf("%d\n", ptr->n);
+		ptr = ptr->next;
+	}
+}
