@@ -39,6 +39,7 @@ int main(int argc, char **argv)
 			validity_check(&stack, operator, line_n);
 		}
 	}
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_n, operator);
 	fclose(file);
 	exit(EXIT_SUCCESS);
 }
