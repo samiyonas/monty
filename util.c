@@ -2,13 +2,13 @@
 
 /**
  * validity_check - check for validity
- * @head: a linked list
+ * @stack: a linked list
  * @op: string
  * @Line: unsigned int
  *
  * Return: void
  */
-void validity_check(stack_t **head, char *op, unsigned int Line)
+void validity_check(stack_t **stack, char *op, unsigned int Line)
 {
 	int i;
 	instruction_t a[] = {{"push", push}, {"pall", pall}, {NULL, NULL}};
@@ -17,7 +17,7 @@ void validity_check(stack_t **head, char *op, unsigned int Line)
 	{
 		if (strcmp(a[i].opcode, op) == 0)
 		{
-			a[i].f(head, Line);
+			a[i].f(stack, Line);
 			return;
 		}
 	}
@@ -26,12 +26,12 @@ void validity_check(stack_t **head, char *op, unsigned int Line)
 }
 /**
  * add_node - add node at the beginning
- * @head: linked list
+ * @stack: linked list
  * @n: integer
  *
  * Return: void
  */
-void add_node(stack_t **head, int n)
+void add_node(stack_t **stack, int n)
 {
 	stack_t *new = malloc(sizeof(stack_t));
 
@@ -42,17 +42,17 @@ void add_node(stack_t **head, int n)
 	}
 
 	new->n = n;
-	if (*head == NULL)
+	if (*stack == NULL)
 	{
-		*head = new;
-		(*head)->next = NULL;
-		(*head)->prev = NULL;
+		*stack = new;
+		(*stack)->next = NULL;
+		(*stack)->prev = NULL;
 		return;
 	}
-	new->next = *head;
-	(*head)->prev = new;
+	new->next = *stack;
+	(*stack)->prev = new;
 	new->prev = NULL;
-	*head = new;
+	*stack = new;
 }
 /**
  * check_for_digit - check if it is a digit
