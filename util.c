@@ -16,6 +16,7 @@ void validity_check(stack_t **stack, char *op, unsigned int Line)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
