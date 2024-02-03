@@ -37,6 +37,7 @@ stack_t *add_node(stack_t **stack, const int n)
 
 	if (stack == NULL)
 	{
+		free(new);
 		return (NULL);
 	}
 
