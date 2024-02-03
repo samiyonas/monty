@@ -21,11 +21,7 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 
 	data = atoi(str_data);
-	if (!add_node(stack, data))
-	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
-	}
+	add_node(stack, data);
 }
 /**
  * pall - print all the values of the stack
