@@ -18,6 +18,7 @@ void validity_check(stack_t **stack, char *op, unsigned int Line)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
@@ -87,4 +88,16 @@ int check_for_digit(char *num)
 		}
 	}
 	return (0);
+}
+/**
+ * nop - doesn't do anything
+ * @stack: linked list
+ * @line_number: number of lines
+ *
+ * Return: void
+ */
+void nop(stack_t **stack, unsigned int line_number)
+{
+	UNUSED(stack);
+	UNUSED(line_number);
 }
