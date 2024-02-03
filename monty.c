@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	while ((read = getline(&line, &len, file)) != -1)
 	{
 		line_n++;
-		operator = strtok(line, " \t\n);
+		operator = strtok(line, "\n\t\r ");
 		if (operator != NULL)
 		{
 			validity_check(&stack, operator, line_n);
