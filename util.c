@@ -31,7 +31,7 @@ void validity_check(stack_t **stack, char *op, unsigned int Line)
  *
  * Return: void
  */
-void add_node(stack_t **stack, int n)
+stack_t *add_node(stack_t **stack, const int n)
 {
 	stack_t *new = malloc(sizeof(stack_t));
 
@@ -47,12 +47,13 @@ void add_node(stack_t **stack, int n)
 		*stack = new;
 		(*stack)->next = NULL;
 		(*stack)->prev = NULL;
-		return;
+		return (new);
 	}
 	new->next = *stack;
 	(*stack)->prev = new;
 	new->prev = NULL;
 	*stack = new;
+	return (new);
 }
 /**
  * check_for_digit - check if it is a digit

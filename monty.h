@@ -43,10 +43,10 @@ typedef struct instruction_s
 
 /* Function declaration */
 
-void validity_check(stack_t **head, char *op, unsigned int Line);
-void push(stack_t **head, unsigned int line_number);
-void add_node(stack_t **head, int n);
+void validity_check(stack_t **stack, char *op, unsigned int Line);
+void push(stack_t **stack, unsigned int line_number);
+stack_t *add_node(stack_t **stack, const int n);
 int check_for_digit(char *num);
-void pall(stack_t **head, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 
 #endif
