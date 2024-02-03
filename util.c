@@ -89,15 +89,3 @@ int check_for_digit(char *num)
 	}
 	return (0);
 }
-/**
- * nop - doesn't do anything
- * @stack: linked list
- * @line_number: number of lines
- *
- * Return: void
- */
-void nop(stack_t **stack, unsigned int line_number)
-{
-	UNUSED(stack);
-	UNUSED(line_number);
-}
