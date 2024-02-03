@@ -21,6 +21,7 @@ void validity_check(stack_t **stack, char *op, unsigned int Line)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", _div},
+		{"mul", _mul},
 		{NULL, NULL}
 	};
 
