@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div - divides the second element by the first element
+ * _div - divides the second element by the first element
  * @stack: linked list
  * @line_number: number of lines
  *
