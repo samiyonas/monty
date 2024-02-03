@@ -12,7 +12,7 @@ void push(stack_t **stack, unsigned int line_number)
 	char *str_data;
 	int data;
 
-	str_data = strtok(NULL, " \n\t\r");
+	str_data = strtok(NULL, "\n\t\r ");
 
 	if (str_data == NULL || check_for_digit(str_data) == 1)
 	{
