@@ -11,7 +11,11 @@
 void validity_check(stack_t **stack, char *op, unsigned int Line)
 {
 	int i;
-	instruction_t a[] = {{"push", push}, {"pall", pall}, {"pint", pint}, {NULL, NULL}};
+	instruction_t a[] = {
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint}
+	};
 
 	for (i = 0; a[i].opcode != NULL; i++)
 	{
@@ -37,8 +41,7 @@ stack_t *add_node(stack_t **stack, const int n)
 
 	if (new == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		return (NULL);
 	}
 
 	new->n = n;
