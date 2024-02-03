@@ -21,7 +21,10 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 
 	data = atoi(str_data);
-	add_node(stack, data);
+	if (!add_node(stack, data))
+	{
+		exit(EXIT_FAILURE);
+	}
 }
 /**
  * pall - print all the values of the stack
