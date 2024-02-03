@@ -45,9 +45,5 @@ void pall(stack_t **stack, unsigned int line_number)
 	{
 		printf("%d\n", ptr->n);
 		ptr = ptr->next;
-		if (ptr == *stack)
-		{
-			return;
-		}
 	}
 }

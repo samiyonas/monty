@@ -35,7 +35,7 @@ void validity_check(stack_t **stack, char *op, unsigned int Line)
  *
  * Return: void
  */
-stack_t *add_node(stack_t **stack, const int n)
+stack_t *add_node(stack_t **stack, int n)
 {
 	stack_t *new = malloc(sizeof(stack_t));
 
