@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 	{
 		line_n++;
 		operator = strtok(line, "\n\t\r ");
-		if (operator != NULL)
+		if (operator != NULL && operator[0] != '#')
 		{
 			validity_check(&stack, operator, line_n);
 		}
