@@ -1,3 +1,2 @@
-#comment
-push 65
+push 98
 pchar
