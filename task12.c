@@ -15,8 +15,13 @@ void pstr(stack_t **stack, unsigned int line_number)
 
 	while (ptr != NULL && ptr->n != 0 && isascii(ptr->n))
 	{
-		printf("%c", ptr->n);
+		putchar(ptr->n);
 		ptr = ptr->next;
+
+		if (ptr == *stack)
+		{
+			break;
+		}
 	}
 	printf("\n");
 }
